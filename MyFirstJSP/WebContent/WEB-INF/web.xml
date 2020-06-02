@@ -66,11 +66,21 @@
 		<servlet-name>ServletData</servlet-name>
 		<url-pattern>/SD</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- Context Parameter -->
 	<context-param>
 		<param-name>myAddr</param-name>
 		<param-value>Seoul</param-value>
 	</context-param>
+
+	<!-- Filter -->
+	<filter>
+		<filter-name>MyFilter</filter-name>
+		<filter-class>com.hangul.myFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MyFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 </web-app>
